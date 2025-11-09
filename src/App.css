@@ -106,21 +106,41 @@
 
 .token-box-with-button {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-direction: row;
+  gap: 8px;
   margin-bottom: 8px;
+  align-items: center;
 }
 
-.token-button {
+.token-box-with-button textarea {
+  flex: 1;
+}
+
+.delete-button {
   padding: 6px 12px;
   font-size: 13px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.translate-button {
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 30px 0px 30px 0px;
   border: none;
   background-color: #4caf50;
   color: white;
   transition: background-color 0.2s;
-  align-self: flex-end;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: 8px;
 }
 
 .token-button:hover {
@@ -151,6 +171,51 @@
 
 .action-buttons button:hover {
   background-color: #535bf2;
+}
+
+.language-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.language-selector select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.language-selector p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.clipboard-button {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.clipboard-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.clipboard-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 /* Responsive design for smaller screens */
